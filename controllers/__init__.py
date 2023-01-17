@@ -1,1 +1,1 @@
-from controllers.controller_views import ControllerViews
+from controllers.controller_views_password import ControllerViews
