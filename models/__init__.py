@@ -1,0 +1,2 @@
+from models.model_password import ModelPassword
+from models.model_label_password import LabelPassword
