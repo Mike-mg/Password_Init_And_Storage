@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
-import menu
+import principal_screen
 
 
 class ControllerMenu:
@@ -10,7 +10,7 @@ class ControllerMenu:
     """
 
     def __init__(self) -> None:
-        self.menu = menu.ViewMenu()
+        self.menu = principal_screen.ViewMenu()
 
     def show_banner_program(self) -> str:
         """
