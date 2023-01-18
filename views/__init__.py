@@ -1,3 +1,2 @@
 from views.view_chars_unauthorized import GetCharactersUnauthorized
 from views.view_label_password import PasswordLabel
-from views.view_menu import ViewMenu

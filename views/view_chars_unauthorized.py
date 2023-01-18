@@ -19,4 +19,4 @@ class GetCharactersUnauthorized:
         self.characters_unauthorized = input(
             "Indicate the characters no authorized : ")
 
-        return self.characters_unauthorized
+        return self.characters_unauthorised
