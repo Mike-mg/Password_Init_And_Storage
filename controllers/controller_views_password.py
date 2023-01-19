@@ -2,7 +2,7 @@
 # coding: utf-8
 
 
-import views
+from views.view_chars_unauthorized import GetCharactersUnauthorized
 
 
 class ControllerViewsPassword:
@@ -11,21 +11,20 @@ class ControllerViewsPassword:
     """
 
     def __init__(self):
-        self.characters_unauthorized = ""
+        self.chars_unauthorized = ""
         self.label_password = ""
-        self.view_chars_no_permit = views.GetUnauthorizedCharacters()
-        self.view_label_password = views.PasswordLabel()
+        self.view_chars_unauthorized = GetCharactersUnauthorized()
 
     def return_chars_unauthorized(self):
         """
         Return the chars no permit
         """
 
-        self.characters_unauthorized = self.view_chars_no_permit.c
+        self.view_chars_unauthorized.return_characters_unauthorized()
 
-    def return_password_label(self):
-        """
-        Return the label pour the password
-        """
+# def return_password_label(self):
+#     """
+#     Return the label pour the password
+#     """
 
-        self.label_password = self.view_label_password.get_password_label()
+#     self.label_password = self.view_

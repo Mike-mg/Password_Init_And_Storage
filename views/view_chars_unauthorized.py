@@ -11,7 +11,7 @@ class GetCharactersUnauthorized:
 
         self.characters_unauthorized = ""
 
-    def characters_unauthorised(self) -> str:
+    def return_characters_unauthorized(self) -> str:
         """
         Specify characters no authorized
         """
@@ -19,4 +19,4 @@ class GetCharactersUnauthorized:
         self.characters_unauthorized = input(
             "Indicate the characters no authorized : ")
 
-        return self.characters_unauthorised
+        return self.characters_unauthorized

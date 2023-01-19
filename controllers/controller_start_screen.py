@@ -1,7 +1,11 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
-from views import view_start_screen
+"""
+Controller view start screen
+"""
+
+from views.view_start_screen import ViewStartScreen
 
 
 class ControllerStartScreen:
@@ -10,7 +14,7 @@ class ControllerStartScreen:
     """
 
     def __init__(self) -> None:
-        self.view_start_sreen = view_start_screen.ViewStartScreen()
+        self.view_start_sreen = ViewStartScreen()
 
     def show_banner_program(self) -> str:
         """
@@ -26,4 +30,5 @@ class ControllerStartScreen:
         self.view_start_sreen.menu_list(
             "List of all passwords & labels",
             "Create a password",
-            "Remove a password",)
+            "Remove a password",
+        )

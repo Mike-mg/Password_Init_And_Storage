@@ -1,14 +1,16 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
+"""
+management of the start screen
+"""
+
 
 class ViewStartScreen:
     """
     Start screen management
     """
-
-    def __init__(self) -> None:
-        self.menu = []
+    menu = []
 
     def sub_menu(self, title: str) -> None:
         """
@@ -34,7 +36,7 @@ class ViewStartScreen:
         )
 
     def menu_list(self, *menu_list):
-        """"
+        """ "
         Get the menu list
         """
 
@@ -47,3 +49,10 @@ class ViewStartScreen:
             print(f"[ {index} ]  {field_menu}")
 
         print(f"{'-' * 79}\n")
+
+    def nb_menu_list(self):
+        """
+        count the nomber of field in the menu
+        """
+
+        return len(self.menu)

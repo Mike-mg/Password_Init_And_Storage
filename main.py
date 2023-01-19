@@ -1,8 +1,13 @@
 #! /usr/bin/env python3
 # coding:utf-8
 
-import controllers
+"""
+Entry of the program
+"""
+
 import os
+
+from controllers.controller_program import ControllerGeneral
 
 os.system("clear")
 
@@ -12,16 +17,13 @@ class Main:
     entry the program
     """
 
-    def __init__(self) -> None:
-        self.controllers_start_screen = controllers.ControllerStartScreen()
+    def __init__(self):
+        self.controller_entry_program = ControllerGeneral()
 
     def show_start_screen(self):
-        """
-        Show start screen
-        """
 
-        self.controllers_start_screen.show_banner_program()
-        self.controllers_start_screen.show_menu_list()
+        self.controller_entry_program.start_screen()
+        self.controller_entry_program.choice_menu()
 
 
 main = Main()
