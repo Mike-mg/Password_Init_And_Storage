@@ -10,6 +10,7 @@ class ViewStartScreen:
     """
     Start screen management
     """
+
     menu = []
 
     def sub_menu(self, title: str) -> None:
@@ -49,10 +50,3 @@ class ViewStartScreen:
             print(f"[ {index} ]  {field_menu}")
 
         print(f"{'-' * 79}\n")
-
-    def nb_menu_list(self):
-        """
-        count the nomber of field in the menu
-        """
-
-        return len(self.menu)

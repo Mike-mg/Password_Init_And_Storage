@@ -17,6 +17,6 @@ class GetCharactersUnauthorized:
         """
 
         self.characters_unauthorized = input(
-            "Indicate the characters no authorized : ")
+            "\n\n> Indicate the characters no authorized : ")
 
-        return self.characters_unauthorized
+        print(self.characters_unauthorized)
