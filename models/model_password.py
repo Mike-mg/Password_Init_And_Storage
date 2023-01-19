@@ -28,12 +28,14 @@ class ModelPassword:
         self.str_lower = list(string.ascii_lowercase)
         self.str_punctuation = list(string.punctuation)
 
-    def generate_password(self, chars_no_permit: list, label_password: str) -> dict:
+    def generate_password(
+        self, chars_no_permit: list, label_password: str
+    ) -> dict:
         """
         Generate the password
         """
 
-        self.password_label = label_password
+        self.password_label = label_password.capitalize()
 
         for chars in chars_no_permit:
             """
@@ -67,8 +69,9 @@ class ModelPassword:
             self.password += random.choice(self.str_lower)
             self.password += random.choice(self.str_punctuation)
 
-        self.password = "".join(random.sample(
-            self.password, len(self.password)))
+        self.password = "".join(
+            random.sample(self.password, len(self.password))
+        )
 
         self.password_generate = {self.password_label: self.password}
 

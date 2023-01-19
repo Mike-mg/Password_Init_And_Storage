@@ -11,8 +11,6 @@ class ViewStartScreen:
     Start screen management
     """
 
-    menu = []
-
     def sub_menu(self, title: str) -> None:
         """
         Format the under-menu titles
@@ -36,17 +34,19 @@ class ViewStartScreen:
             f"{str('=' * 79)}\n\n\n"
         )
 
-    def menu_list(self, *menu_list):
+    def menu_list(self):
         """ "
         Get the menu list
         """
 
-        for field in menu_list:
-            self.menu.append(field)
+        list_menu = ["List of all passwords & labels",
+        "Create a password",
+        "Remove a password",
+        "Quit"]
 
         self.sub_menu("<<< Menu Program >>>")
 
-        for index, field_menu in enumerate(self.menu):
+        for index, field_menu in enumerate(list_menu):
             print(f"[ {index} ]  {field_menu}")
 
         print(f"{'-' * 79}\n")

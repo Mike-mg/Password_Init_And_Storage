@@ -5,11 +5,7 @@
 Entry of the program
 """
 
-import os
-
 from controllers.controller_program import ControllerGeneral
-
-os.system("clear")
 
 
 class Main:
@@ -20,11 +16,10 @@ class Main:
     def __init__(self):
         self.controller_entry_program = ControllerGeneral()
 
-    def show_start_screen(self):
+    def entry_program(self):
 
-        self.controller_entry_program.start_screen()
-        self.controller_entry_program.choice_menu()
+        self.controller_entry_program.entry_program()
 
 
 main = Main()
-main.show_start_screen()
+main.entry_program()

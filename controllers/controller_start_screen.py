@@ -28,7 +28,5 @@ class ControllerStartScreen:
         show the list menu
         """
         self.view_start_sreen.menu_list(
-            "List of all passwords & labels",
-            "Create a password",
-            "Remove a password",
+            
         )

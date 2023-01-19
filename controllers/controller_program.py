@@ -1,6 +1,8 @@
 #! /usr/bin/env python3
 # coding:utf-8
 
+import os
+
 """
 Controller of program
 """
@@ -29,25 +31,38 @@ class ControllerGeneral:
         self.view_start_screen.show_banner_program()
         self.view_start_screen.show_menu_list()
 
-    def choice_menu(self):
+    def entry_program(self):
 
-        choice_menu = int(input("> Choice action menu : "))
+        while True:
 
-        if choice_menu == 0:
-            pass
+            os.system("clear")
 
-        if choice_menu == 1:
+            self.start_screen()
 
-            chars_no_permit = self.view_controller_password
-            chars_no_permit.return_chars_unauthorized()
+            choice_menu = int(input("> Choice action menu : "))
 
-            label_password = self.view_controller_password
-            label_password.return_password_label()
+            if choice_menu == 0:
+                pass
 
-            password = self.model_password
-            print(password.generate_password(
-                chars_no_permit.chars_no_permit, label_password.label_password
-            ))
+            if choice_menu == 1:
 
-        if choice_menu == 2:
-            pass
+                chars_no_permit = self.view_controller_password
+                chars_no_permit.return_chars_unauthorized()
+
+                label_password = self.view_controller_password
+                label_password.return_password_label()
+
+                password = self.model_password
+                password.generate_password(
+                    chars_no_permit.chars_no_permit,
+                    label_password.label_password)
+
+            if choice_menu == 2:
+                pass
+
+            if choice_menu == 3:
+                break
+
+            else:
+                if choice_menu not in range(3):
+                    break
