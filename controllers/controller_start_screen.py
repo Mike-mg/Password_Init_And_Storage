@@ -1,30 +1,29 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
-import principal_screen
+from views import view_start_screen
 
 
-class ControllerMenu:
+class ControllerStartScreen:
     """
     Controller show menu
     """
 
     def __init__(self) -> None:
-        self.menu = principal_screen.ViewMenu()
+        self.view_start_sreen = view_start_screen.ViewStartScreen()
 
     def show_banner_program(self) -> str:
         """
         show the banner program
         """
 
-        self.menu.program_banner()
+        self.view_start_sreen.program_banner()
 
     def show_menu_list(self) -> list:
         """
         show the list menu
         """
-
-        self.menu.list_menu(
-            "List of all password",
+        self.view_start_sreen.menu_list(
+            "List of all passwords & labels",
             "Create a password",
             "Remove a password",)

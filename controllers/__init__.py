@@ -1,1 +1,1 @@
-from controllers.controller_menu import ControllerMenu
+from controllers.controller_start_screen import ControllerStartScreen

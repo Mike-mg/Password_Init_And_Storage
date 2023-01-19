@@ -2,9 +2,9 @@
 # coding: utf-8
 
 
-class ViewMenu:
+class ViewStartScreen:
     """
-    menu view management
+    Start screen management
     """
 
     def __init__(self) -> None:
@@ -33,7 +33,7 @@ class ViewMenu:
             f"{str('=' * 79)}\n\n\n"
         )
 
-    def list_menu(self, *menu_list):
+    def menu_list(self, *menu_list):
         """"
         Get the menu list
         """
