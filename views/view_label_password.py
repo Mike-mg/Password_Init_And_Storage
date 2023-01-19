@@ -16,6 +16,6 @@ class PasswordLabel:
         Get the password label
         """
 
-        self.password_label = input("Entry the password label : ")
+        self.password_label = input("> Entry the password label : ")
 
         return self.password_label

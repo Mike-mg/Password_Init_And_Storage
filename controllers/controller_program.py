@@ -5,6 +5,7 @@
 Controller of program
 """
 
+from models.model_password import ModelPassword
 from controllers.controller_start_screen import ControllerStartScreen
 from controllers.controller_views_password import ControllerViewsPassword
 
@@ -18,6 +19,7 @@ class ControllerGeneral:
 
         self.view_start_screen = ControllerStartScreen()
         self.view_controller_password = ControllerViewsPassword()
+        self.model_password = ModelPassword()
 
     def start_screen(self):
         """
@@ -29,13 +31,23 @@ class ControllerGeneral:
 
     def choice_menu(self):
 
-        choice_menu = int(input("Choice action menu : "))
+        choice_menu = int(input("> Choice action menu : "))
 
         if choice_menu == 0:
             pass
 
         if choice_menu == 1:
-            self.view_controller_password.return_chars_unauthorized()
+
+            chars_no_permit = self.view_controller_password
+            chars_no_permit.return_chars_unauthorized()
+
+            label_password = self.view_controller_password
+            label_password.return_password_label()
+
+            password = self.model_password
+            print(password.generate_password(
+                chars_no_permit.chars_no_permit, label_password.label_password
+            ))
 
         if choice_menu == 2:
             pass

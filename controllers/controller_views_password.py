@@ -12,17 +12,21 @@ class ControllerViewsPassword:
     """
 
     def __init__(self):
-        self.chars_unauthorized = ""
+
+        self.chars_no_permit = []
         self.label_password = ""
         self.view_chars_unauthorized = GetCharactersUnauthorized()
         self.view_label_password = PasswordLabel()
 
-    def return_chars_unauthorized(self):
+    def return_chars_unauthorized(self) -> list:
         """
         Return the chars no permit
         """
+        self.chars_no_permit = (
+            self.view_chars_unauthorized.return_characters_unauthorized()
+        )
 
-        self.view_chars_unauthorized.return_characters_unauthorized()
+        return self.chars_no_permit
 
     def return_password_label(self):
         """
@@ -30,3 +34,5 @@ class ControllerViewsPassword:
         """
 
         self.label_password = self.view_label_password.get_password_label()
+
+        return self.label_password
