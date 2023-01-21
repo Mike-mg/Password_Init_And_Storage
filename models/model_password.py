@@ -1,5 +1,5 @@
 """
-Model for generate password
+Module of model for generate password
 """
 
 import random
@@ -34,7 +34,9 @@ class ModelPassword:
         self.password_label = label_password.capitalize()
 
         for chars in chars_no_permit:
-            """remove the chars unauthorized chars of list"""
+            """
+            remove the chars unauthorized chars of list
+            """
 
             if chars in self.numbers:
                 self.numbers.remove(chars)
@@ -54,6 +56,7 @@ class ModelPassword:
             Selects 4 integer for the password
             """
             self.password += random.choice(self.numbers)
+            nb_int += 1
 
         nb_str = 0
         while nb_str < 2:
@@ -64,6 +67,7 @@ class ModelPassword:
             self.password += random.choice(self.str_upper)
             self.password += random.choice(self.str_lower)
             self.password += random.choice(self.str_punctuation)
+            nb_str += 1
 
         self.password = "".join(
             random.sample(self.password, len(self.password)))

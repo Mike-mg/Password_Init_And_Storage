@@ -1,9 +1,8 @@
-#! /usr/bin/env python3
-# coding: utf-8
+"""
+Module controller view password
+"""
 
-
-from views.view_chars_unauthorized import GetCharactersUnauthorized
-from views.view_label_password import PasswordLabel
+import views
 
 
 class ControllerViewsPassword:
@@ -15,8 +14,9 @@ class ControllerViewsPassword:
 
         self.chars_no_permit = []
         self.label_password = ""
-        self.view_chars_unauthorized = GetCharactersUnauthorized()
-        self.view_label_password = PasswordLabel()
+        self.view_chars_unauthorized = views.view_chars_unauthorized.\
+            GetCharactersUnauthorized()
+        self.view_label_password = views.view_label_password.PasswordLabel()
 
     def return_chars_unauthorized(self) -> list:
         """

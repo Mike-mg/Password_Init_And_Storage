@@ -1,10 +1,9 @@
 """
-Controller of program
+Module of controller general of program
 """
 
-from views import view_start_screen, view_chars_unauthorized,\
-    view_label_password
-from models import model_password
+import views
+import models
 # import os
 
 
@@ -15,13 +14,14 @@ class ControllerGeneral:
 
     def __init__(self):
 
-        self.view_start_screen = view_start_screen.ViewStartScreen()
-        self.view_chars_unauthorized = view_chars_unauthorized.\
+        self.view_start_screen = views.view_start_screen.ViewStartScreen()
+        self.view_chars_unauthorized = views.view_chars_unauthorized.\
             GetCharactersUnauthorized()
-        self.view_label_password = view_label_password.PasswordLabel()
-        self.model_password = model_password.ModelPassword()
+        self.view_label_password = views.view_label_password.PasswordLabel()
+        self.model_password = models.model_password.ModelPassword()
         self.chars_no_permit = []
         self.label_password = ""
+        self.password = {}
 
     def start_screen(self):
         """
@@ -47,11 +47,9 @@ class ControllerGeneral:
                 self.label_password = self.view_label_password.\
                     get_password_label()
 
-                self.model_password.generate_password(
+                self.password = self.model_password.generate_password(
                     self.chars_no_permit, self.label_password
                 )
-
-                print(self.chars_no_permit, " : ", self.label_password)
 
             if choice_menu == 2:
                 pass
