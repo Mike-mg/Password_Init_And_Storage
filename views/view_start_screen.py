@@ -1,6 +1,3 @@
-#! /usr/bin/env python3
-# coding: utf-8
-
 """
 management of the start screen
 """
@@ -40,9 +37,9 @@ class ViewStartScreen:
         """
 
         list_menu = ["List of all passwords & labels",
-        "Create a password",
-        "Remove a password",
-        "Quit"]
+                     "Create a password",
+                     "Remove a password",
+                     "Quit"]
 
         self.sub_menu("<<< Menu Program >>>")
 

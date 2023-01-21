@@ -1,6 +1,3 @@
-#! /usr/bin/env python3
-# coding: utf-8
-
 """
 Model for generate password
 """
@@ -38,9 +35,7 @@ class ModelPassword:
         self.password_label = label_password.capitalize()
 
         for chars in chars_no_permit:
-            """
-            remove the chars unauthorized chars of list
-            """
+            """ remove the chars unauthorized chars of list """
 
             if chars in self.numbers:
                 self.numbers.remove(chars)

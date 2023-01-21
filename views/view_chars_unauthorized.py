@@ -1,5 +1,6 @@
-#! /usr/bin/env python3
-# coding:utf-8
+"""
+Class get chars no permit
+"""
 
 
 class GetCharactersUnauthorized:

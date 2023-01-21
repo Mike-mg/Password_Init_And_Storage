@@ -5,7 +5,7 @@
 Entry of the program
 """
 
-from controllers.controller_program import ControllerGeneral
+from controllers import controller_program
 
 
 class Main:
@@ -14,11 +14,14 @@ class Main:
     """
 
     def __init__(self):
-        self.controller_entry_program = ControllerGeneral()
+        self.controllers_program = controller_program.ControllerGeneral()
 
     def entry_program(self):
+        """
+        Entry of program
+        """
 
-        self.controller_entry_program.entry_program()
+        self.controllers_program.start_screen()
 
 
 main = Main()
