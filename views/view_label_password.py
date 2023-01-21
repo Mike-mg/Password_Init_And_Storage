@@ -12,11 +12,12 @@ class PasswordLabel:
 
         self.password_label = ""
 
-    def get_password_label(self):
+    def get_password_label(self) -> str:
         """
         Get the password label
         """
 
-        self.password_label = input("> Entry the password label : ")
+        self.password_label = input(
+            "> Entry the password label : ").capitalize()
 
         return self.password_label

@@ -36,10 +36,12 @@ class ViewStartScreen:
         Get the menu list
         """
 
-        list_menu = ["List of all passwords & labels",
-                     "Create a password",
-                     "Remove a password",
-                     "Quit"]
+        list_menu = [
+            "List of all passwords & labels",
+            "Create a password",
+            "Remove a password",
+            "Quit",
+        ]
 
         self.sub_menu("<<< Menu Program >>>")
 

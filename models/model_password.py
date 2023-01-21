@@ -26,8 +26,7 @@ class ModelPassword:
         self.str_punctuation = list(string.punctuation)
 
     def generate_password(
-        self, chars_no_permit: list, label_password: str
-    ) -> dict:
+            self, chars_no_permit: list, label_password: str) -> dict:
         """
         Generate the password
         """
@@ -35,7 +34,7 @@ class ModelPassword:
         self.password_label = label_password.capitalize()
 
         for chars in chars_no_permit:
-            """ remove the chars unauthorized chars of list """
+            """remove the chars unauthorized chars of list"""
 
             if chars in self.numbers:
                 self.numbers.remove(chars)
@@ -49,24 +48,25 @@ class ModelPassword:
             elif chars in self.str_punctuation:
                 self.str_punctuation.remove(chars)
 
-        for num_int in range(4):
+        nb_int = 0
+        while nb_int < 4:
             """
             Selects 4 integer for the password
             """
-
             self.password += random.choice(self.numbers)
 
-        for type_string in range(2):
+        nb_str = 0
+        while nb_str < 2:
             """
             Selects 2 chars of by type string for the password
             """
+
             self.password += random.choice(self.str_upper)
             self.password += random.choice(self.str_lower)
             self.password += random.choice(self.str_punctuation)
 
         self.password = "".join(
-            random.sample(self.password, len(self.password))
-        )
+            random.sample(self.password, len(self.password)))
 
         self.password_generate = {self.password_label: self.password}
 
