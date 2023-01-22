@@ -1,5 +1,5 @@
 """
-management of the start screen
+Management of the start screen
 """
 
 

@@ -2,7 +2,7 @@
 Entry of the program
 """
 
-from controllers import controller_program
+import controllers
 
 
 class Main:
@@ -11,7 +11,8 @@ class Main:
     """
 
     def __init__(self):
-        self.controllers_program = controller_program.ControllerGeneral()
+        self.controllers_program = controllers.controller_program.\
+            ControllerGeneral()
 
     def entry_program(self):
         """

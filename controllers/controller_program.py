@@ -4,7 +4,7 @@ Module of controller general of program
 
 import os
 
-import pkg_password
+import pkg_views_program
 
 
 class ControllerGeneral:
@@ -14,7 +14,8 @@ class ControllerGeneral:
 
     def __init__(self):
 
-        self.view_start_screen = pkg_password.
+        self.view_start_screen = pkg_views_program.view_start_screen.\
+            ViewStartScreen()
         # self.view_chars_unauthorized = views.view_chars_unauthorized.\
         #     GetCharactersUnauthorized()
         # self.view_label_password = views.view_label_password.PasswordLabel()
@@ -31,29 +32,28 @@ class ControllerGeneral:
         while True:
 
             os.system("clear")
-            print("ok")
 
-            # self.view_start_screen.program_banner()
-            # self.view_start_screen.menu_list()
+            self.view_start_screen.program_banner()
+            self.view_start_screen.menu_list()
 
-            # choice_menu = int(input("> Choice action menu : "))
+            choice_menu = int(input("> Choice action menu : "))
 
-            # if choice_menu == 0:
-            #     pass
+            if choice_menu == 0:
+                pass
 
-            # if choice_menu == 1:
-            #     self.chars_no_permit = self.view_chars_unauthorized.\
-            #         return_characters_unauthorized()
+            if choice_menu == 1:
+                self.chars_no_permit = self.view_chars_unauthorized.\
+                    return_characters_unauthorized()
 
-            #     self.label_password = self.view_label_password.\
-            #         get_password_label()
+                self.label_password = self.view_label_password.\
+                    get_password_label()
 
-            #     self.password = self.model_password.generate_password(
-            #         self.chars_no_permit, self.label_password
-            #     )
+                self.password = self.model_password.generate_password(
+                    self.chars_no_permit, self.label_password
+                )
 
-            # if choice_menu == 2:
-            #     pass
+            if choice_menu == 2:
+                pass
 
-            # if choice_menu == 3:
-            #     break
+            if choice_menu == 3:
+                break
