@@ -2,7 +2,7 @@
 Module controller view password
 """
 
-import views
+import views_pkg_password
 
 
 class ControllerViewsPassword:
@@ -14,9 +14,9 @@ class ControllerViewsPassword:
 
         self.chars_no_permit = []
         self.label_password = ""
-        self.view_chars_unauthorized = views.view_chars_unauthorized.\
+        self.view_chars_unauthorized = views_pkg_password.\
             GetCharactersUnauthorized()
-        self.view_label_password = views.view_label_password.PasswordLabel()
+        self.view_label_password = views_pkg_password.PasswordLabel()
 
     def return_chars_unauthorized(self) -> list:
         """
