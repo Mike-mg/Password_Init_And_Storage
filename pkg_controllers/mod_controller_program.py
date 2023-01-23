@@ -2,7 +2,7 @@
 Module of controller general of program
 """
 
-# import os
+import os
 
 import pkg_program
 import pkg_password
@@ -15,7 +15,6 @@ class ControllerGeneral:
     """
 
     def __init__(self):
-        pass
 
         self.views_program = pkg_program.ViewStartScreen()
         self.view_chars_unauthorized = pkg_password.GetCharactersUnauthorized()
@@ -30,7 +29,7 @@ class ControllerGeneral:
 
         while True:
 
-            # os.system("clear")
+            os.system("clear")
 
             choice_menu = self.views_program.start_program()
 

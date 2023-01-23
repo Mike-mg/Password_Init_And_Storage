@@ -3,6 +3,7 @@ Utils for the database
 """
 
 import sqlite3
+import pkg_bdd
 
 
 class UtilsDb:
@@ -12,6 +13,7 @@ class UtilsDb:
 
     def __init__(self) -> None:
         self.database = "pkg_bdd/database.db"
+        self.view_database = pkg_bdd.ViewBdd()
 
     def insert_database(self, values):
         """
@@ -33,9 +35,7 @@ class UtilsDb:
         all_element_database = cursor.execute(
             "select * from sesame").fetchall()
 
-        for element in all_element_database:
-            print(f"[ {element[0]} ] {element[1]} - {element[2]}")
-
+        self.view_database.show_formated_element_table(all_element_database)
         connection.close()
 
     def remove_element_database(self):
@@ -45,10 +45,11 @@ class UtilsDb:
 
         self.show_all_database()
 
-        choice_id = int(input("Choice id a remove : "))
+        choice_id = self.view_database.choice_option_menu()
 
         connection = sqlite3.connect(self.database)
         cursor = connection.cursor()
         cursor.execute(f"delete from sesame where id = {choice_id}")
+        connection.commit()
 
         connection.close()

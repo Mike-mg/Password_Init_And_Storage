@@ -33,9 +33,6 @@ class ModelPassword:
         password_label = ""
 
         for chars in chars_no_permit:
-            """
-            remove the chars unauthorized chars of list
-            """
 
             if chars in self.numbers:
                 self.numbers.remove(chars)
@@ -51,17 +48,12 @@ class ModelPassword:
 
         nb_int = 0
         while nb_int < 4:
-            """
-            Selects 4 integer for the password
-            """
+
             password += random.choice(self.numbers)
             nb_int += 1
 
         nb_str = 0
         while nb_str < 2:
-            """
-            Selects 2 chars of by type string for the password
-            """
 
             password += random.choice(self.str_upper)
             password += random.choice(self.str_lower)
