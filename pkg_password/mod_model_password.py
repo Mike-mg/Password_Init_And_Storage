@@ -11,8 +11,6 @@ class ModelPassword:
     Model password and generate
     """
 
-    password = ""
-    password_label = ""
     password_generate = ()
 
     def __init__(self):
@@ -30,6 +28,9 @@ class ModelPassword:
         """
         Generate the password
         """
+
+        password = ""
+        password_label = ""
 
         for chars in chars_no_permit:
             """
@@ -53,7 +54,7 @@ class ModelPassword:
             """
             Selects 4 integer for the password
             """
-            self.password += random.choice(self.numbers)
+            password += random.choice(self.numbers)
             nb_int += 1
 
         nb_str = 0
@@ -62,15 +63,14 @@ class ModelPassword:
             Selects 2 chars of by type string for the password
             """
 
-            self.password += random.choice(self.str_upper)
-            self.password += random.choice(self.str_lower)
-            self.password += random.choice(self.str_punctuation)
+            password += random.choice(self.str_upper)
+            password += random.choice(self.str_lower)
+            password += random.choice(self.str_punctuation)
             nb_str += 1
 
-        self.password_label = label_password.capitalize()
-        self.password = "".join(
-            random.sample(self.password, len(self.password)))
+            password_label = label_password.capitalize()
+            password = "".join(random.sample(password, len(password)))
 
-        self.password_generate = (None, self.password_label, self.password)
+        self.password_generate = (None, password_label, password)
 
         return self.password_generate

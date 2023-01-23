@@ -33,7 +33,7 @@ class GetPasswordLabel:
 
         self.password_label = ""
 
-    def get_password_label(self) -> str:
+    def return_password_label(self) -> str:
         """
         Get the password label
         """

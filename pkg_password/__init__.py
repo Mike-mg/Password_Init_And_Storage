@@ -1,7 +1,7 @@
 """
-import module of packages pkgs_password
+import module of pkgs_password
 """
 
-from pkg_password.controller_pkg_password import ControllerViewsPassword # noqa
-from pkg_password.model_pkg_password import ModelPassword # noqa
-from pkg_password.views_pkg_password import GetCharactersUnauthorized, GetPasswordLabel # noqa
+from .mod_controller_password import ControllerPassword # noqa
+from .mod_model_password import ModelPassword # noqa
+from .mod_views_password import GetCharactersUnauthorized, GetPasswordLabel # noqa

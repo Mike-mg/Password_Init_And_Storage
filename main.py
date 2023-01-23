@@ -11,14 +11,14 @@ class Main:
     """
 
     def __init__(self):
-        self.controllers_program = controllers.ControllerGeneral()
+        self.views_entry_program = controllers.ControllerGeneral()
 
     def entry_program(self):
         """
         Entry of program
         """
 
-        self.controllers_program.init_program()
+        self.views_entry_program.init_program()
 
 
 main = Main()

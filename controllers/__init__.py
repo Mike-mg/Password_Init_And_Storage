@@ -2,4 +2,4 @@
 Import modules of controllers
 """
 
-from .controller_program import ControllerGeneral # noqa
+from .mod_controller_program import ControllerGeneral # noqa

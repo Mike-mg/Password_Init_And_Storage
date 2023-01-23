@@ -2,4 +2,4 @@
 Import modules of pkg_program
 """
 
-from .view_pkg_program import ViewStartScreen # noqa
+from .mod_view_program import ViewStartScreen # noqa
