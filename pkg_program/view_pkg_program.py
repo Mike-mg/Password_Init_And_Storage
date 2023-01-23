@@ -2,8 +2,6 @@
 Management of the start screen
 """
 
-import os
-
 
 class ViewStartScreen:
     """
@@ -51,7 +49,7 @@ class ViewStartScreen:
             print(f"[ {index} ]  {field_menu}")
 
         print(f"{'-' * 79}\n")
-        
+
     def start_program(self):
         """
         Init start screeen

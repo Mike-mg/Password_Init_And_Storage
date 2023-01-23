@@ -2,9 +2,9 @@
 Module of controller general of program
 """
 
+import os
 
-import pkg_views_program
-import pkg_password
+import pkg_program
 
 
 class ControllerGeneral:
@@ -13,16 +13,16 @@ class ControllerGeneral:
     """
 
     def __init__(self):
+        pass
 
-        self.pkg_view_program = pkg_views_program.view_start_screen.\
-            ViewStartScreen()
-        self.get_password = pkg_password.ControllerViewsPassword.\
-            get_password()
+        self.pkg_view_program = pkg_program.ViewStartScreen()
 
-    def entry_program(self):
+    def init_program(self):
         """
         Start screen program
         """
+
+        os.system("clear")
 
         choice_menu = self.pkg_view_program.start_program()
 
@@ -32,8 +32,7 @@ class ControllerGeneral:
                 pass
 
             if choice_menu == 1:
-                self.get_password
-
+                pass
             if choice_menu == 2:
                 pass
 

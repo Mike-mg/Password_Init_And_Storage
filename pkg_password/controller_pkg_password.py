@@ -16,7 +16,7 @@ class ControllerViewsPassword:
         self.view_chars_unauthorized = views_pkg_password.\
             GetCharactersUnauthorized()
         self.view_label_password = views_pkg_password.PasswordLabel()
-        self.model_password = model_pkg_password.ModelPassword()
+        self.model_password = model_pkg_password()
 
     def get_password(self):
         """

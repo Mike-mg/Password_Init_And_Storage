@@ -7,19 +7,18 @@ import controllers
 
 class Main:
     """
-    Entry the program
+    Class entry the program
     """
 
     def __init__(self):
-        self.controllers_program = controllers.controller_program.\
-            ControllerGeneral()
+        self.controllers_program = controllers.ControllerGeneral()
 
     def entry_program(self):
         """
         Entry of program
         """
 
-        self.controllers_program.entry_program()
+        self.controllers_program.init_program()
 
 
 main = Main()

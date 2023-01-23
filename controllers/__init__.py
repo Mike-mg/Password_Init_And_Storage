@@ -1,5 +1,5 @@
 """
-Import module controllers general
+Import modules of controllers
 """
 
-from controllers import controller_program # noqa
+from .controller_program import ControllerGeneral # noqa
