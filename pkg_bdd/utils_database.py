@@ -45,7 +45,10 @@ class UtilsDb:
 
         self.show_all_database()
 
+        choice_id = int(input("Choice id a remove : "))
+
         connection = sqlite3.connect(self.database)
         cursor = connection.cursor()
+        cursor.execute(f"delete from sesame where id = {choice_id}")
 
         connection.close()
