@@ -1,6 +1,5 @@
 """
-Class get chars no permit
-Class get label password
+Module views pkg_password
 """
 
 
@@ -11,7 +10,7 @@ class GetCharactersUnauthorized:
 
     def __init__(self):
 
-        self.characters_unauthorized = ""
+        self.characters_unauthorized = []
 
     def return_characters_unauthorized(self) -> list:
         """
@@ -25,7 +24,7 @@ class GetCharactersUnauthorized:
         return self.characters_unauthorized
 
 
-class PasswordLabel:
+class GetPasswordLabel:
     """
     View label of password
     """

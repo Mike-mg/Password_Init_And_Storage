@@ -7,7 +7,7 @@ import controllers
 
 class Main:
     """
-    entry the program
+    Entry the program
     """
 
     def __init__(self):
@@ -19,7 +19,7 @@ class Main:
         Entry of program
         """
 
-        self.controllers_program.start_screen()
+        self.controllers_program.entry_program()
 
 
 main = Main()

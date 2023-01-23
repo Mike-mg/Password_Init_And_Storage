@@ -1,5 +1,5 @@
 """
-Module of model for generate password
+Module model pkg_password
 """
 
 import random
@@ -13,7 +13,7 @@ class ModelPassword:
 
     password = ""
     password_label = ""
-    password_generate = {}
+    password_generate = ()
 
     def __init__(self):
         """
@@ -26,12 +26,10 @@ class ModelPassword:
         self.str_punctuation = list(string.punctuation)
 
     def generate_password(
-            self, chars_no_permit: list, label_password: str) -> dict:
+            self, chars_no_permit: list, label_password: str) -> tuple:
         """
         Generate the password
         """
-
-        self.password_label = label_password.capitalize()
 
         for chars in chars_no_permit:
             """
@@ -69,18 +67,10 @@ class ModelPassword:
             self.password += random.choice(self.str_punctuation)
             nb_str += 1
 
+        self.password_label = label_password.capitalize()
         self.password = "".join(
             random.sample(self.password, len(self.password)))
 
-        self.password_generate = {self.password_label: self.password}
+        self.password_generate = (None, self.password_label, self.password)
 
         return self.password_generate
-
-    def label_password(self, label: str) -> str:
-        """
-        get label of password
-        """
-
-        self.label_password = label
-
-        return self.label_password
