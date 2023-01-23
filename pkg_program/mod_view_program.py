@@ -15,7 +15,7 @@ class ViewStartScreen:
 
         print(f"{title.center(79)}\n{'-' * 79}")
 
-    def program_banner(self) -> None:
+    def banner(self) -> None:
         """
         Show the banner of program
         """
@@ -43,6 +43,8 @@ class ViewStartScreen:
             "Quit",
         ]
 
+        print("\n\n")
+
         self.sub_menu("<<< Menu Program >>>")
 
         for index, field_menu in enumerate(list_menu):
@@ -50,16 +52,11 @@ class ViewStartScreen:
 
         print(f"{'-' * 79}\n")
 
-    def start_program(self):
+    def choice_menu(self):
         """
-        Init start screeen
+        Select option of menu
         """
 
-        while True:
+        choice = int(input("> Choice action menu : "))
 
-            self.program_banner()
-            self.menu_list()
-
-            choice_menu = int(input("> Choice action menu : "))
-
-            return choice_menu
+        return choice
