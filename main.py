@@ -1,25 +1,29 @@
-"""
-Entry of the program
-"""
+# Entry of the program
 
-import pkg_controllers
+
+import pkg_program
 
 
 class Main:
-    """
-    Class entry the program
-    """
+    # Program entry point
 
     def __init__(self):
-        self.views_entry_program = pkg_controllers.ControllerGeneral()
 
-    def entry_program(self):
+        self.controller_general = pkg_program.ControllerGeneral()
+
+    def start_main(self):
         """
-        Entry of program
+        Show the menu while var choice_user_menu
+        Is True (4 = False and quit the program)
         """
 
-        self.views_entry_program.init_program()
+        self.controller_general.show_menu()
+
+        while True:
+
+            if self.controller_general.choice_user_menu() is False:
+                break
 
 
 main = Main()
-main.entry_program()
+main.start_main()

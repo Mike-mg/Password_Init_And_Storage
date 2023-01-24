@@ -1,24 +1,36 @@
-"""
-Management of the start screen
-"""
+# Management of the start screen
+
+
+import os
+import sys
 
 
 class ViewStartScreen:
-    """
-    Start screen management
-    """
+    # Start screen management
+
+    MENU_LIST = [
+        "List of all passwords & labels",
+        "Create a password",
+        "Remove a password",
+        "Return menu",
+        "Quit",
+    ]
 
     def sub_menu(self, title: str) -> None:
-        """
-        Format the under-menu titles
-        """
+        # Format the under-menu titles
 
         print(f"{title.center(79)}\n{'-' * 79}")
 
+    def clear_screen(self) -> None:
+        # Clear the screen
+
+        if sys.platform.startswith("linux") or sys.platform.startswith("darwin"): # noqa
+            os.system("clear")
+        elif sys.platform.startswith("win32"):
+            os.system("cls")
+
     def banner(self) -> None:
-        """
-        Show the banner of program
-        """
+        # Show the banner of program
 
         name_program = "-*- Password Init And Storage -*-"
 
@@ -31,32 +43,32 @@ class ViewStartScreen:
             f"{str('=' * 79)}\n\n\n"
         )
 
-    def menu_list(self):
-        """ "
-        Get the menu list
-        """
+    def show_menu(self):
+        # menu view management
 
-        list_menu = [
-            "List of all passwords & labels",
-            "Create a password",
-            "Remove a password",
-            "Quit",
-        ]
+        self.clear_screen()
+        self.banner()
+        self.sub_menu("* MENU *")
 
-        print("\n\n")
+        for index, m_menu in enumerate(self.MENU_LIST):
+            print(f"[ {index} ]  {m_menu}")
 
-        self.sub_menu("<<< Menu Program >>>")
+        print(f"{'-' * 79}")
 
-        for index, field_menu in enumerate(list_menu):
-            print(f"[ {index} ]  {field_menu}")
+    def choice_menu(self) -> int:
+        # Verification and redirection to controller of menu indexes
 
-        print(f"{'-' * 79}\n")
+        choice = input(
+            f"\n\n\n{'=' * 22}\n"
+            f"Help : {len(self.MENU_LIST) - 2} > Return menu"
+            f"\n{'-' * 22}"
+            f"\n{'> Select a option > '}"
+        )
 
-    def choice_menu(self):
-        """
-        Select option of menu
-        """
+        try:
+            choice = int(choice)
 
-        choice = int(input("> Choice action menu : "))
+        except ValueError:
+            print(f"\n{':: ERROR > Enter a valid option [0-4]'}\n")
 
         return choice
