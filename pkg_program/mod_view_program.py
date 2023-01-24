@@ -24,7 +24,8 @@ class ViewStartScreen:
     def clear_screen(self) -> None:
         # Clear the screen
 
-        if sys.platform.startswith("linux") or sys.platform.startswith("darwin"): # noqa
+        if sys.platform.startswith("linux") or \
+                                   sys.platform.startswith("darwin"):
             os.system("clear")
         elif sys.platform.startswith("win32"):
             os.system("cls")
