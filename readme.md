@@ -2,7 +2,7 @@
 ## Application to manage passwords in a database.
 ### Installation & launch :
 - **Clone the repository**   
-git clone `https://github.com/Mike-mg/Password_Init_And_Storage.git`
+`git clone https://github.com/Mike-mg/Password_Init_And_Storage.git`
 ####
 - **Go to the Password_Init_And_Storage folder**
 ####
