@@ -26,8 +26,11 @@ class ViewBdd:
         print(f"\n{name_table}\n{'=' * 79}\n{texte_menu_table}\n{'=' * 79}")
 
         for element in all_element_database:
-            print(f"{str(element[0]).center(11)} | \
-                  {str(element[1]).center(45)} | \
-                  {str(element[2]).center(15)} |")
+
+            element_0 = str(element[0]).center(11)
+            element_1 = str(element[1]).center(45)
+            element_2 = str(element[2]).center(15)
+
+            print(f"{element_0} | {element_1} | {element_2} |")
 
         print(f"{'=' * 79}\n")
