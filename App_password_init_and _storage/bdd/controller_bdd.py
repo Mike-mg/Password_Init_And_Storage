@@ -1,13 +1,13 @@
 # Module Controllers database
 
-import pkg_bdd
+import bdd
 
 
 class DataControls:
     # Utils for database
 
     def __init__(self) -> None:
-        self.data_utils = pkg_bdd.UtilsDb()
+        self.data_utils = bdd.UtilsDb()
 
     def insert_into_database(self, cle_tuple):
         # Insert data into Bdd

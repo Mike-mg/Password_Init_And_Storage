@@ -1,7 +1,7 @@
 # Entry of the program
 
 
-import pkg_program
+import program
 
 
 class Main:
@@ -9,7 +9,7 @@ class Main:
 
     def __init__(self):
 
-        self.controller_general = pkg_program.ControllerGeneral()
+        self.controller_general = program.ControllerGeneral()
 
     def start_main(self):
         """

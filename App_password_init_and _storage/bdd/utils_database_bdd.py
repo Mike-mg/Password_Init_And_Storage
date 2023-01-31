@@ -3,7 +3,7 @@ Utils for the database
 """
 
 import sqlite3
-import pkg_bdd
+import bdd
 
 
 class UtilsDb:
@@ -13,7 +13,7 @@ class UtilsDb:
 
     def __init__(self) -> None:
         self.database = "pkg_bdd/database.db"
-        self.view_database = pkg_bdd.ViewBdd()
+        self.view_database = bdd.ViewBdd()
 
     def insert_database(self, values):
         """

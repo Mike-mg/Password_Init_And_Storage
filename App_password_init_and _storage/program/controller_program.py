@@ -2,9 +2,9 @@
 Module of controller general of program
 """
 
-import pkg_program
-import pkg_password
-import pkg_bdd
+import program
+import password
+import bdd
 
 
 class ControllerGeneral:
@@ -12,10 +12,10 @@ class ControllerGeneral:
 
     def __init__(self):
 
-        self.views_program = pkg_program.ViewStartScreen()
-        self.view_password = pkg_password.ViewsPassword()
-        self.model_password = pkg_password.ModelPassword()
-        self.data = pkg_bdd.DataControls()
+        self.views_program = program.ViewStartScreen()
+        self.view_password = password.ViewsPassword()
+        self.model_password = password.ModelPassword()
+        self.data = bdd.DataControls()
 
     def show_menu(self) -> None:
         # Show the program menu
