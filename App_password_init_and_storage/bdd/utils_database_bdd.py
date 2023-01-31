@@ -12,7 +12,7 @@ class UtilsDb:
     """
 
     def __init__(self) -> None:
-        self.database = "pkg_bdd/database.db"
+        self.database = "App_password_init_and_storage/bdd/database.db"
         self.view_database = bdd.ViewBdd()
 
     def insert_database(self, values):
