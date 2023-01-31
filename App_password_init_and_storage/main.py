@@ -1,11 +1,14 @@
-# Entry of the program
-
+"""
+Entry of the program
+"""
 
 import program
 
 
 class Main:
-    # Program entry point
+    """
+    Program entry point
+    """
 
     def __init__(self):
 

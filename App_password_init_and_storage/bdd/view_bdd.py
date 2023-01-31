@@ -1,20 +1,28 @@
-# Module views for the database
+"""
+Module views for the database
+"""
 
 
 class ViewBdd:
-    # Views for the Dbb
+    """
+    Views for the Bdd
+    """
 
     def __init__(self) -> None:
         pass
 
     def choice_option_menu(self) -> int:
-        # Select choice for action of database
+        """
+        Select choice for action of database
+        """
 
         choice_id = int(input("> Choice id at remove : "))
         return choice_id
 
     def show_formated_element_table(self, all_element_database):
-        # Get element of the table and show
+        """
+        Get and show all element formated of the table in the bdd
+        """
 
         id_table = 'Id'.center(11)
         label = 'Label'.center(45)

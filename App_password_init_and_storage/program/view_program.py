@@ -1,4 +1,6 @@
-# Management of the start screen
+"""
+Management of the start screen
+"""
 
 
 import os
@@ -6,7 +8,9 @@ import sys
 
 
 class ViewStartScreen:
-    # Start screen management
+    """
+    Start screen management
+    """
 
     MENU_LIST = [
         "List of all passwords & labels",
@@ -17,21 +21,29 @@ class ViewStartScreen:
     ]
 
     def sub_menu(self, title: str) -> None:
-        # Format the under-menu titles
+        """
+        Format the under-menu titles
+        """
 
         print(f"{title.center(79)}\n{'-' * 79}")
 
     def clear_screen(self) -> None:
-        # Clear the screen
+        """
+        Clear the screen
+        """
 
         if sys.platform.startswith("linux") or \
-                                   sys.platform.startswith("darwin"):
+                sys.platform.startswith("darwin"):
+
             os.system("clear")
+
         elif sys.platform.startswith("win32"):
             os.system("cls")
 
     def banner(self) -> None:
-        # Show the banner of program
+        """
+        Show the banner of program
+        """
 
         name_program = "-*- Password Init And Storage -*-"
 
@@ -45,7 +57,9 @@ class ViewStartScreen:
         )
 
     def show_menu(self):
-        # menu view management
+        """
+        menu view management
+        """
 
         self.clear_screen()
         self.banner()
@@ -57,7 +71,9 @@ class ViewStartScreen:
         print(f"{'-' * 79}")
 
     def choice_menu(self) -> int:
-        # Verification and redirection to controller of menu indexes
+        """
+        Verification and redirection to controller of menu indexes
+        """
 
         choice = input(
             f"\n\n\n{'=' * 22}\n"

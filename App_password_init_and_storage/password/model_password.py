@@ -1,16 +1,19 @@
-# Module model pkg_password
+"""
+Module model password
+"""
 
 import random
 import string
 
 
 class ModelPassword:
-    # Model password and generate
+    """
+    Model for generate a password and label
+    """
 
     password_generate = ()
 
     def __init__(self):
-        # init password
 
         self.numbers = list(string.digits)
         self.str_upper = list(string.ascii_uppercase)
@@ -19,7 +22,9 @@ class ModelPassword:
 
     def generate_password(
             self, chars_no_permit: list, label_password: str) -> tuple:
-        # Generate the password
+        """
+        Generate the password
+        """
 
         password = ""
         password_label = ""

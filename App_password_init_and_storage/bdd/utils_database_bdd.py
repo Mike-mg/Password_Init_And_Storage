@@ -1,5 +1,5 @@
 """
-Utils for the database
+Utils functions on actions for the database
 """
 
 import sqlite3
@@ -17,7 +17,7 @@ class UtilsDb:
 
     def insert_database(self, values):
         """
-        Connection at bdd
+        Insert a element at the bdd
         """
         connection = sqlite3.connect(self.database)
         cursor = connection.cursor()
